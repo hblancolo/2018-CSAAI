@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<script src="pacman_hector.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    canvas {
+      border:3px solid #f2f2f2;
+      background-color: black;
+      width: 30%;
+      display: block;
+      margin-top: 5%;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    body {
+      background: url('game_background.jpg');
+      background-size: cover;
+      color: white;
+    }
+
+    .pacman_letters {
+      font-family: comic sans ms;
+    }
+
+    table, th, td {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10%;
+    }
+    th, td {
+      padding: 5px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    #notice {
+      color: red;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #gameinit {
+      margin-top: 20%;
+    }
+
+    #buttons-play-pause {
+        text-align: center;
+    }
+
+    #records {
+        text-align: center;
+    }
+
+    video {
+        
+    }
+
+  </style>
+</head>
+<body>
+    <div id="buttons-play-pause" >
+        <button onclick="playGame()" class="pacman_letters">Play</button>
+        <button onclick="pauseGame()" class="pacman_letters">Stop</button>
+    </div>
+
+    <div id="records">
+        <p id="bestrecord"></p>
+        <p id="sessionrecord"></p>
+    </div>
+
+    <div id="canvas-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div align="center">
+        <div id="gameinit">
+            <form method="post" id="form">
+                <legend class="pacman_letters">Welcome to Pacman2017</legend>
+                <input type="button" value="CLICK TO START" onclick="startGame()" class="pacman_letters" >
+            </form>
+        </div>
+    </div>
+
+    <div id='pacmanImages' align="center">
+        <img id="pacmanYellow" src='pacman.png' draggable="true" ondragstart="drag(event)" width="20" height="20">
+        <img id="pacmanPink" src='pacmanPink.png' draggable="true" ondragstart="drag(event)" width="20" height="20">
+        <img id="pacmanGreen" src='pacmanGreen.png' draggable="true" ondragstart="drag(event)" width="20" height="20">
+    </div>
+
+    <div id="game">
+        <table>
+            <tr>
+                <td class="pacman_letters">Score </td>
+                <td id="score" class="pacman_letters">0</td>
+                <td class="pacman_letters">Time </td>
+                <td id="timer" class="pacman_letters">0</td>
+            </tr>
+        </table>
+        <div id="buttons-play-pause">
+            <button onclick="location.reload()" class="pacman_letters">MENU</button>
+        </div>
+        <p id='notice'></p>
+    </div>
+    <script>
+        var game = document.getElementById('game');
+        game.style.display = 'none';
+    </script>
+
+</body>
+</html>
