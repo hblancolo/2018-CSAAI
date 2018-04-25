@@ -1,0 +1,40 @@
+
+
+<html>
+  <head>
+    <style>
+      body {
+        background: black;
+        color:#CCCCCC;
+      }
+      #c2 {
+        background-image: url('bikeMike.jpg');
+        background-repeat: no-repeat;
+      }
+      div {
+
+        float: left;
+        border :1px solid #444444;
+        padding:10px;
+        margin: 10px;
+
+        background:#3B3B3B;
+      }
+    </style>
+    <script src="main.js"></script>
+  </head>
+
+  <body onload="processor.doLoad()">
+    <div>
+      <video controls id=video  width="400" height="200">
+        <source src = "spiderman-green-screen.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div>
+      <canvas id="c2" width="400" height="200"/>
+    </div>
+    <div>
+      <canvas id="c1" width="400" height="200"/>
+    </div>
+  </body>
+</html>
