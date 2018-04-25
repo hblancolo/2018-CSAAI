@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Realizador TV</title>
+<link rel="stylesheet" type="text/css" href="realizador_tv.css">
+<script src="realizador_tv.js"></script>
+</head>
+<body onload="playVideos()">
+<div class="container-main">
+    <div id="container-1">
+        <video id="video-1" class="videoInsert" height="200" onclick="srcToProgram(1)" onmouseover="activateSound(1)" onmouseout="muteSound(1)">
+            <source id="source-1" src="Borders.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="container-2">
+        <video id="video-2" class="videoInsert" height="200" onclick="srcToProgram(2)" onmouseover="activateSound(2)" onmouseout="muteSound(2)">
+            <source id="source-2" src="Childish.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="container-3">
+        <video id="video-3" class="videoInsert" height="200" onclick="srcToProgram(3)" onmouseover="activateSound(3)" onmouseout="muteSound(3)">
+            <source id="source-3" src="DRAM-ChaCha.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="container-4">
+        <video id="video-4" class="videoInsert" height="200" onclick="srcToProgram(4)" onmouseover="activateSound(4)" onmouseout="muteSound(4)">
+            <source id="source-4" src="Mahalia.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<div class="container-main">
+    <video id="program" class="videoInsert" height="300" onmouseover="activateSound(5)" onmouseout="muteSound(5)">
+        <source id="source-program" src="Mahalia.mp4" type="video/mp4">
+    </video>
+</div>
+<br>
+<div class="container-main">
+    <p id="time-display"></p>
+    <button id="playPause" onclick="playPause()">Play/Pause Sources</button>
+    <br>
+    <br>
+    <input id="input-text" type="text" placeholder="beginning-end">
+    <button id="loop" onclick="setLoop()">Set Loop</button>
+    <button id="delete-loop" onclick="deleteLoop()">Delete Loop</button>
+    <p id="notice"></p>
+</div>
+
+</body>
+</html>
